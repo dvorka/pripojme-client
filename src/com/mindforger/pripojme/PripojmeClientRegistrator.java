@@ -46,15 +46,17 @@ public class PripojmeClientRegistrator {
 		int sensorCount = 50;
 
 		String eud;
-		String lat=randomInteger(49, 51)+"."+randomInteger(10, 99)+"09579";
-		String log=randomInteger(14, 15)+"."+randomInteger(10, 99)+"70745";
+		String lat="50.048110";
+		String log="14.459131";
 		register(JT,lat,log);
+		lat="50.110460";
+		log="14.489455";
 		register(LUKY,lat,log);
 		
 		for(int i=1;i<=sensorCount;i++) {
 			eud=EUD_PREFIX+String.format("%1$05d", i);
-			lat=randomInteger(49, 51)+"."+randomInteger(10, 99)+"09579";
-			log=randomInteger(14, 15)+"."+randomInteger(10, 99)+"70745";
+			lat=randomInteger(49, 50)+"."+randomInteger(10, 99)+"09579";
+			log=randomInteger(12, 18)+"."+randomInteger(10, 99)+"70745";
 			register(eud,lat,log);
 		}
 	}
